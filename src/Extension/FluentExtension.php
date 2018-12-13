@@ -311,6 +311,8 @@ class FluentExtension extends DataExtension
 
     public function augmentSQL(SQLSelect $query, DataQuery $dataQuery = null)
     {
+        //Hack to fix search in English when Fluent enabled
+        return;
         $locale = $this->getDataQueryLocale($dataQuery);
         if (!$locale) {
             return;
